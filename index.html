@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>OMDb template</title>
+</head>
+<body>
+	<h1>Filmer</h1>
+	<div class="background-image"></div>
+	<!-- <img id="movie-poster" src="picture/fallback img.png" alt="Movie Poster"> -->
+
+	<input type="text" placeholder="movie titel" id="Search">
+	<!-- <button id="btn" type="submit">Search</button> --> 
+	<label for="type-select">Choose Type:</label>
+	<select id="type-select">
+  		<option value="all">All</option>
+ 	 	<option value="movie">Movie</option>
+ 		 <option value="series">Series</option>
+ 		 <option value="episode">Episode</option>
+	</select>
+	<label for="year-select">Choose Release Year:</label>
+	<select id="year-select">
+	  <option value="">All</option>
+	</select>
+	
+	<div id="content">
+		<!-- <ul id="movietitles"></ul> -->
+	<div class="movie-result">
+    <img src="${movie.Poster}" class="cover-image">
+    <div class="movie-info">
+        <ul id="movietitles">
+            <h1>${movie.Title}</h1>
+            <li>Release Date: ${movie.Year}</li>
+            <li>IMDb Number: ${movie.imdbID}</li>
+            <li>Category: ${movie.Type}</li>
+        </ul>
+    </div>
+</div></div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
